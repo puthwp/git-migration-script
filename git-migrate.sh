@@ -79,14 +79,14 @@ while IFS= read -r url; do
         repo_duplicate_name $url
     fi
 
-    # sep
-    # echo "Add New Remote"
-    # git_add_remote $upstream
-    # sep
-    # echo "Pushing everything ..."
-    # push_everything
-    # echo "$repo is Done"
-    # header
+    sep
+    echo "Add New Remote"
+    git_add_remote $upstream
+    sep
+    echo "Pushing everything ..."
+    push_everything
+    echo "$repo is Done"
+    header
     cd ..
 done < ../$LINKS_FILE
 cd ..
