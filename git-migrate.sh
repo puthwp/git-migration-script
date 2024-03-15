@@ -17,16 +17,17 @@ sep() {
 clone_old_repo() {
     url=$1
     repo=$2
-    git clone --mirror $url $repo
+    git clone $url $repo
     cd $repo
     ls
     git fetch --all
     git fetch --tags
+    git pull --all
 }
 
 create_gh_repo() {
     repo=$1
-    result=$(gh repo create $TEAM/$repo --private 2>&1)
+    result=$(gh repo create $TEAM/$repo --private --source=. --remote=upstream --push 2>&1)
     echo $result
     # echo "result is $result"
     # return $?
