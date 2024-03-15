@@ -1,0 +1,2 @@
+git@github.com:Outlier-proj/testgh.git
+git@github.com:Outlier-proj/pipat_front_cust.git
